@@ -30,8 +30,10 @@ jobs:
 
       - name: Do it
         run: |
-              export ARCH=arm CROSS_COMPILE=~/gcc && cd $GITHUB_WORKSPACE
-              make clean mrproper
-              make v2800_defconfig
-              make -j$(nproc --all)
+              export ARCH=arm CROSS_COMPILE=~/gcc/bin/android-armeabi-
+              cd $GITHUB_WORKSPACE
+              mkdir out
+              make O=out clean mrproper
+              make O=out v2800_defconfig
+              make O=out -j$(nproc --all)
 
