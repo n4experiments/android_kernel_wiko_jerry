@@ -41,7 +41,9 @@
 
 
 #include "f_fs.c"
+#ifdef CONFIG_SND
 #include "f_audio_source.c"
+#endif
 #ifdef CONFIG_SND_RAWMIDI
 #include "f_midi.c"
 #endif
