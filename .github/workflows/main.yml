@@ -28,11 +28,9 @@ jobs:
       - name: Download GCC
         run: git clone https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9 ~/gcc
 
-      - name: Setup exports
-        run: export ARCH=arm CROSS_COMPILE=~/gcc && cd $GITHUB_WORKSPACE
-      
       - name: Do it
         run: |
+              export ARCH=arm CROSS_COMPILE=~/gcc && cd $GITHUB_WORKSPACE
               make clean mrproper
               make v2800_defconfig
               make -j$(nproc --all)
