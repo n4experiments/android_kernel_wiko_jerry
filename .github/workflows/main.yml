@@ -30,7 +30,7 @@ jobs:
 
       - name: Do it
         run: |
-              export ARCH=arm CROSS_COMPILE=~/gcc/bin/android-armeabi-
+              export ARCH=arm CROSS_COMPILE=~/gcc/bin/arm-linux-androideabi-
               cd $GITHUB_WORKSPACE
               mkdir out
               make O=out clean mrproper
