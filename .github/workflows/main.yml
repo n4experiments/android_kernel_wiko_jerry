@@ -5,13 +5,11 @@ name: CI
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the twrp-6.0 branch
-  push:
-    branches: [ twrp-6.0 ]
-  pull_request:
-    branches: [ twrp-6.0 ]
+  - push
+  - pull_request
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  - workflow_dispatch
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
