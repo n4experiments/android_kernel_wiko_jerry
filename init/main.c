@@ -724,6 +724,7 @@ asmlinkage __visible void __init start_kernel(void)
 		panic("Too many boot %s vars at `%s'", panic_later,
 		      panic_param);
 
+	panic("instant panic aaa");
 	lockdep_info();
 
 	/*
