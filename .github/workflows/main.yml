@@ -28,7 +28,7 @@ jobs:
 
       - name: Do it
         run: |
-              export ARCH=arm CROSS_COMPILE=~/gcc/bin/arm-linux-androideabi-
+              export ARCH=arm CROSS_COMPILE=~/gcc/bin/arm-linux-androideabi- PROJECT_NAME=v2800
               cd $GITHUB_WORKSPACE
               mkdir out
               make O=out clean mrproper
