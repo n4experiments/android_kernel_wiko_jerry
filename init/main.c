@@ -762,6 +762,7 @@ asmlinkage __visible void __init start_kernel(void)
 	/* Should be run before the first non-init thread is created */
 	init_espfix_bsp();
 #endif
+	panic("nift4 added this on purpose");
 	thread_info_cache_init();
 	cred_init();
 	fork_init(totalram_pages);
